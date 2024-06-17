@@ -1,6 +1,6 @@
 
 <?php 
-$connection = mysqli_connect("mysql-db", "root", "your_root_password", "practice_vs");
+$connection = mysqli_connect("mysql-db", "root", "your_root_password", "practice_vs")
     if (!$connection) {
     die("Connection failed: " . mysqli_connect_error());
 }
@@ -12,4 +12,5 @@ echo "Connected successfully";
     if (!$db_select) {
         die("Database selection failed: " . mysqli_connect_error());
     }
-  ?>
+?>
+

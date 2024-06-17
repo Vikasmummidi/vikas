@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 	if(isset($_SESSION['sid']))
@@ -24,8 +25,6 @@ header("location:image.php");
   } 
 else
 echo"<script>alert('StudentId and Password are not matched');</script>";
-
-
 
 mysqli_close($connection);
 }
@@ -87,7 +86,5 @@ mysqli_close($connection);
         </table></center>
             
     </div>
-    
-    
-    
 </body>
+
