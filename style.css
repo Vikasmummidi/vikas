@@ -1,0 +1,161 @@
+
+                        
+  /* body{ 
+        background-position: center;
+        background-image: url(4.png);
+        background-repeat: no-repeat;
+        background-attachment:fixed;
+        background-size: 25%;
+        
+        }*/
+         P
+       {
+          color:blue;
+        }
+      
+p:first-letter
+{
+    color:red;
+
+
+ }
+
+        nav
+    {
+    width:100%;
+    margin:0;
+    font-size: 14px; 
+    }
+    nav ul
+    {
+    background-color:#eee;/*#eee*/  
+    overflow:hidden;
+    margin:0;
+    padding:0;
+    }
+    ul.topnav li
+{
+    list-style:none;
+    float:left;
+}
+ul.topnav li.dropdownIcon {
+    display:none;
+   
+
+}
+ul.topnav li.topnav-right{
+    float:right;
+}
+ul.topnav li a, ul.topnav li span{
+    display: block;
+    text-decoration:none;
+    min-height: 16px;
+    padding:14px;
+    text-transform: uppercase;
+    color:#666;
+}
+ul.topnav li a:hover{
+    background-color:blue;
+    color:white;
+}
+
+
+  
+    
+  .content{
+        background-color: rgba(255, 255, 255, 0.9);
+        font-size: 20px ;
+        min-height:100%;
+        min-width:100%;
+
+      
+       }
+      
+       
+    
+ 
+ 
+    .p1,.p3{
+        text-align: center;
+        font-style:italic;
+        font-family: cursive;
+    }
+    .p2
+    {
+       text-align: justify;
+        text-indent: 5cm;
+        font-family: cursive;
+    }
+  .tab
+    {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%); 
+    
+    }
+    .heading
+    {
+        color:blue;
+        font-weight: bold;
+        font-size:20px;
+        
+    }
+    input[type="submit"], input[type="reset"]{
+        
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 12px;
+  background: blue;
+  padding: 2px 3px;
+  text-decoration: none;
+}
+
+     
+    
+    .main img
+    {
+
+        max-width:100%;
+        max-height:60%;
+    }
+    
+
+
+@media screen and (max-width: 1000px)
+{
+    ul.topnav li:not(:nth-child(1))
+    {
+        display: none;
+    }
+    .topnav li.dropdownIcon
+    {
+       display:block; 
+       float: right;
+       postion: absolute;
+       top: 0;
+       right: 0;
+
+    }
+    ul.topnav.responsive
+    {
+        postion: relative;
+    }
+    ul.topnav.responsive li 
+    {
+        display: inline;
+        float: none;
+
+    }
+    ul.topnav.responsive li a
+    {
+        display: block;
+        text-align: left;
+
+    }
+
+}

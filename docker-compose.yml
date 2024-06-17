@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile  # Optional, default is 'Dockerfile'
+    container_name: php-web
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+  db:
+    image: mysql:8.0
+    container_name: mysql-db
+    restart: always
+    environment: 
+      MYSQL_ROOT_PASSWORD: your_root_password
+      MYSQL_DATABASE: practice_vs
+        
+    volumes:
+      - db-data:/var/lib/mysql
+      - ./export.sql:/docker-entrypoint-initdb.d/export.sql  # Mount export.sql for initialization
+    networks:
+      - app-network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: your_root_password
+      MYSQL_ALLOW_NO_PASSWORD: 'yes'  # Allow root login without password (not recommended for production) 
+    ports:
+      - "8181:80"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  db-data:
+    driver: local
+

@@ -1,0 +1,52 @@
+<style>
+    nav
+    {
+    width:100%;
+    margin:0; 
+    }
+    nav ul
+    {
+    background-color:#eee;/*#eee*/  
+    overflow:hidden;
+    margin:0;
+    padding:0;
+	}
+ul.topnav li
+{
+    list-style:none;
+    float:left;
+}
+ul.topnav li.topnav-right{
+    float:right;
+}
+ul.topnav li a{
+    display: block;
+    text-decoration:none;
+    min-height: 16px;
+    padding:14px;
+    text-transform: uppercase;
+    color:#666;
+}
+ul.topnav li a:hover{
+    background-color:blue;
+    color:white;
+}
+
+
+
+
+
+
+</style>
+<body><nav>
+    <ul class="topnav">
+        <li><a class="active" href="image.php">Home</a></li>
+        <li><a href="aboutus.php">About us</a></li>
+        <li><a href="Studentregistration.php"> Stutdent Registration</a></li>
+        <li><a href="studentloginform.php">Student login</a></li>
+        <li class=topnav-right><a href='logout.php'>Logout</a></li>
+    <li class=topnav-right><?php echo "hello".$_SESSION['sid'];?></li>
+    
+        </ul>
+    </nav>
+</body>
