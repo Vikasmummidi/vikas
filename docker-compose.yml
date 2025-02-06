@@ -25,7 +25,7 @@ services:
         
     volumes:
       - db-data:/var/lib/mysql
-      - ./export.sql:/docker-entrypoint-initdb.d/export.sql  # Mount export.sql for initialization
+      - ./backup.sql:/docker-entrypoint-initdb.d/export.sql  # Mount export.sql for initialization
     networks:
       - app-network
 
