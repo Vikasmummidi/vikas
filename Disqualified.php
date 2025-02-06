@@ -1,4 +1,4 @@
-<head> <link href=style.css rel=stylesheet type="text/css"></head>
+
 <?php
 
 
@@ -8,6 +8,7 @@ if(!isset($_SESSION['sid']))
 { header("location:index.php");}
 include "navbar.php";
 ?>
+<head> <link href=style.css rel=stylesheet type="text/css"></head>
 
 
 
